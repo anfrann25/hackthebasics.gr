@@ -1,1 +1,1 @@
-<iframe src="https://anfrann25.github.io/hackthebasics.gr/00-Introduction/quiz.html" style="width:100%; height:480px; border:none; background:transparent;"></iframe>
+<iframe src="https://anfrann25.github.io/hackthebasics.gr/00-Introduction/quiz.html" style="width:100%; height:500px; border:none; background:transparent;"></iframe>
