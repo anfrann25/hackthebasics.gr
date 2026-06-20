@@ -4,7 +4,6 @@
   * [Τι είναι το Cybersecurity;](00-Introduction/whatIsCybersecurity.md)
   * [Cybersecurity Domains](00-Introduction/cybersecurityDomains.md)
   * [Quiz](00-Introduction/Quiz.md)
-  dada
 
 * **01. Δικτύωση**
   * [OSI Model](01-Networking/OSI-Model.md)
@@ -17,4 +16,3 @@
 
 * **02. Linux**
   * [Basic Linux Commands](02-Linux/README.md)
-dsdsdsdsds
