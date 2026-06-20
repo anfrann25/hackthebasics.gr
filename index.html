@@ -1,5 +1,43 @@
 <!DOCTYPE html>
 <html lang="el">
+<script>
+  document.addEventListener('click', function(e) {
+    const sidebarLink = e.target.closest('.sidebar-nav a');
+    if (!sidebarLink) return;
+
+    const targetPage = sidebarLink.getAttribute('href');
+
+    // 1. Έλεγχος για την ενότητα 01-Networking
+    // Ξεκλειδώνει ΜΟΝΟ αν έχει περάσει το quiz της εισαγωγής (intro)
+    if (targetPage.includes('01-Networking/')) {
+        if (!localStorage.getItem('quiz_00-Introduction_passed')) {
+            e.preventDefault();
+            alert("🔒 Η ενότητα '01-Networking' είναι κλειδωμένη! Πρέπει πρώτα να περάσεις το Quiz στο τέλος της Εισαγωγής (00-Introduction).");
+            return;
+        }
+    }
+
+    // 2. Έλεγχος για την ενότητα 02-Linux
+    // Ξεκλειδώνει ΜΟΝΟ αν έχει περάσει το quiz των δικτύων (networking)
+    if (targetPage.includes('02-Linux/')) {
+        if (!localStorage.getItem('quiz_01-Networking_passed')) {
+            e.preventDefault();
+            alert("🔒 Η ενότητα '02-Linux' είναι κλειδωμένη! Πρέπει πρώτα να ολοκληρώσεις το Quiz στο τέλος των Δικτύων (01-Networking).");
+            return;
+        }
+    }
+
+    // 3. Έλεγχος για την ενότητα 03-Virtual-Lab
+    if (targetPage.includes('03-Virtual-Lab/')) {
+        if (!localStorage.getItem('quiz_02-Linux_passed')) {
+            e.preventDefault();
+            alert("🔒 Η ενότητα '03-Virtual-Lab' είναι κλειδωμένη! Πρέπει πρώτα να περάσεις το Quiz του Linux.");
+            return;
+        }
+    }
+  });
+</script>
+
 <head>
   <meta charset="UTF-8">
   <title>🔒 HackTheBasics.gr - Learning Path</title>
