@@ -13,4 +13,4 @@
 
 
 * **02. Linux**
-  * [Basic Linux Commands](01-Networking/README.md)
+  * [Basic Linux Commands](02-Linux/README.md)
