@@ -1,43 +1,5 @@
 <!DOCTYPE html>
 <html lang="el">
-<script>
-  document.addEventListener('click', function(e) {
-    const sidebarLink = e.target.closest('.sidebar-nav a');
-    if (!sidebarLink) return;
-
-    const targetPage = sidebarLink.getAttribute('href');
-
-    // 1. Έλεγχος για την ενότητα 01-Networking
-    // Ξεκλειδώνει ΜΟΝΟ αν έχει περάσει το quiz της εισαγωγής (intro)
-    if (targetPage.includes('01-Networking/')) {
-        if (!localStorage.getItem('quiz_00-Introduction_passed')) {
-            e.preventDefault();
-            alert("🔒 Η ενότητα '01-Networking' είναι κλειδωμένη! Πρέπει πρώτα να περάσεις το Quiz στο τέλος της Εισαγωγής (00-Introduction).");
-            return;
-        }
-    }
-
-    // 2. Έλεγχος για την ενότητα 02-Linux
-    // Ξεκλειδώνει ΜΟΝΟ αν έχει περάσει το quiz των δικτύων (networking)
-    if (targetPage.includes('02-Linux/')) {
-        if (!localStorage.getItem('quiz_01-Networking_passed')) {
-            e.preventDefault();
-            alert("🔒 Η ενότητα '02-Linux' είναι κλειδωμένη! Πρέπει πρώτα να ολοκληρώσεις το Quiz στο τέλος των Δικτύων (01-Networking).");
-            return;
-        }
-    }
-
-    // 3. Έλεγχος για την ενότητα 03-Virtual-Lab
-    if (targetPage.includes('03-Virtual-Lab/')) {
-        if (!localStorage.getItem('quiz_02-Linux_passed')) {
-            e.preventDefault();
-            alert("🔒 Η ενότητα '03-Virtual-Lab' είναι κλειδωμένη! Πρέπει πρώτα να περάσεις το Quiz του Linux.");
-            return;
-        }
-    }
-  });
-</script>
-
 <head>
   <meta charset="UTF-8">
   <title>🔒 HackTheBasics.gr - Learning Path</title>
@@ -48,18 +10,60 @@
 </head>
 <body>
   <div id="app">Φόρτωση μαθήματος...</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+
   <script>
     const githubUser = "anfrann25";
     const githubRepo = "hackthebasics.gr";
 
     window.$docsify = {
       name: '🔒 HackTheBasics.gr',
-      //parse Markdown files from the main branch of your GitHub repository
       basePath: `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/main/`,
       loadSidebar: true,
-      auto2top: true
+      auto2top: true,
+
+      // Plugins του Docsify
+      plugins: [
+        function(hook, vm) {
+          // Αυτό το hook τρέχει ΚΑΘΕ ΦΟΡΑ πριν αλλάξει σελίδα ο χρήστης
+          hook.beforeEach(function(html, next) {
+            // Παίρνουμε το path της σελίδας που πάει να ανοίξει (π.ε. /01-Networking/DNS)
+            const route = vm.route.path;
+
+            // 1. Έλεγχος για την ενότητα 01-Networking
+            if (route.includes('/01-Networking/')) {
+              if (!localStorage.getItem('quiz_00-Introduction_passed')) {
+                alert("🔒 Η ενότητα '01-Networking' είναι κλειδωμένη! Πρέπει πρώτα να περάσεις το Quiz στο τέλος της Εισαγωγής (00-Introduction).");
+                window.location.hash = '#/'; // Τον γυρνάει στην αρχική σελίδα
+                return;
+              }
+            }
+
+            // 2. Έλεγχος για την ενότητα 02-Linux
+            if (route.includes('/02-Linux/')) {
+              if (!localStorage.getItem('quiz_01-Networking_passed')) {
+                alert("🔒 Η ενότητα '02-Linux' είναι κλειδωμένη! Πρέπει πρώτα να ολοκληρώσεις το Quiz στο τέλος των Δικτύων (01-Networking).");
+                window.location.hash = '#/01-Networking/README'; // Τον γυρνάει στα δίκτυα
+                return;
+              }
+            }
+
+            // 3. Έλεγχος για την ενότητα 03-Virtual-Lab
+            if (route.includes('/03-Virtual-Lab/')) {
+              if (!localStorage.getItem('quiz_02-Linux_passed')) {
+                alert("🔒 Η ενότητα '03-Virtual-Lab' είναι κλειδωμένη! Πρέπει πρώτα να περάσεις το Quiz του Linux.");
+                window.location.hash = '#/02-Linux/README';
+                return;
+              }
+            }
+
+            // Αν όλα είναι οκ, προχωράει κανονικά στο μάθημα
+            next(html);
+          });
+        }
+      ]
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
 </body>
 </html>
