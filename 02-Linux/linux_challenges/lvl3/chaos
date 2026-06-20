@@ -1,0 +1,232 @@
+
+^[[1;31m�����������������������������������������������������������������������
+�[0m�[32m[DEBUG]�[0m StArTiNg dUmP... addr: 0x00007FFD89C2E400 size: 4096 bytes
+�[1;33m00000000  7f 45 4c 46 02 01 01 00  00 00 00 00 00 00 00 00  |.ELF............|
+00000010  03 00 3e 00 01 00 00 00  b0 72 02 00 00 00 00 00  |..>......r......|
+00000020  40 00 00 00 00 00 00 00  88 1d 0b 00 00 00 00 00  |@...............|�[0m
+0x00007FFD89C2E430:  \xfd\xde\xad\xbe\xef\x00\xff\x42\x42\x42\x42\x13\x37\x69\x69\x69
+�[1;31m<< SYSTEM CORRUPTION DETECTED >>�[0m
+push rbp; mov rbp, rsp; sub rsp, 16; mov dword [rbp-4], 0; jmp .L2;
+.L3: add dword [rbp-4], 1; .L2: cmp dword [rbp-4], 9; jle .L3;
+���[1;5;31mG L I T C H�[0m��� ���[1;5;32mA C T I V E�[0m���
+%PDF-1.4 %���� 5 0 obj <</Length 6 0 R/Filter /FlateDecode>> stream
+x��]�Mn�0 ��_�\����E� n�^����r�9���[1;30m[HIDDEN]�[0m� ���-��1�$�(�!���H�����^[[34mFL^[[31mAG^[[32m{w^[[33msl^[[35m_c^[[36mh^[[31ma^[[32mo^[[33ms^[[35m_u^[[36mn^[[31ml^[[32me^[[33ma^[[35ms^[[36mh^[[31me^[[32md}^[[0m^�I�
+�R_����L&�'����v����W�)��Z�����Q��>�^�j��<� endstream endobj
+^[[1;31mFF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+^[[0m0xDEADC0DE: \x90\x90\x90\x90\xcc\xcc\xcc\xcc\xeb\xfe\xeb\xfe\x31\xc0\xc3
+�[33m[WARN]�[0m Unreadable sectors found. Retrying... (Attempt 1/666)
+01000111 01000001 010100rb 01001111 01010100 01001001 01000011
+jR\xeb\x0dG\x1bZ\x15p\x19\x1fI\x16\x1aM\x1e\x12U\x1a\x1aX\x11\x18Z\x08
+�[1;36m>> CORE DUMP COMPLETE <<�[0m
+�����������������������������������������������������������������������
+[2026-06-20 23:14:01] INFO  [system_init] Initializing WSL Ubuntu subsystem...
+[2026-06-20 23:14:02] INFO  [kernel] Linux version 5.15.0-101-generic (gcc version 11.4.0)
+[2026-06-20 23:14:02] INFO  [systemd] Mounted /mnt/c successfully (drvfs).
+[2026-06-20 23:14:03] DEBUG [network_mod] DHCP solicit sent on eth0...
+[2026-06-20 23:14:05] INFO  [network_mod] DHCP lease acquired, IP: 172.23.41.12
+[2026-06-20 23:14:06] SUCCESS [security_service] Firewall rules loaded successfully.
+[2026-06-20 23:14:10] INFO  [cron_daemon] Started Scheduled Tasks Daemon.
+[2026-06-20 23:14:15] DEBUG [user_manager] Session opened for user 'root' via sshd.
+^[[1;31m�����������������������������������������������������������������������
+�[0m�[32m[DEBUG]�[0m StArTiNg dUmP... addr: 0x00007FFD89C2E400 size: 4096 bytes
+�[1;33m00000000  7f 45 4c 46 02 01 01 00  00 00 00 00 00 00 00 00  |.ELF............|
+00000010  03 00 3e 00 01 00 00 00  b0 72 02 00 00 00 00 00  |..>......r......|
+00000020  40 00 00 00 00 00 00 00  88 1d 0b 00 00 00 00 00  |@...............|�[0m
+0x00007FFD89C2E430:  \xfd\xde\xad\xbe\xef\x00\xff\x42\x42\x42\x42\x13\x37\x69\x69\x69
+�[1;31m<< SYSTEM CORRUPTION DETECTED >>�[0m
+push rbp; mov rbp, rsp; sub rsp, 16; mov dword [rbp-4], 0; jmp .L2;
+.L3: add dword [rbp-4], 1; .L2: cmp dword [rbp-4], 9; jle .L3;
+���[1;5;31mG L I T C H�[0m��� ���[1;5;32mA C T I V E�[0m���
+%PDF-1.4 %���� 5 0 obj <</Length 6 0 R/Filter /FlateDecode>> stream
+x��]�Mn�0 ��_�\����E� n�^����r�9���[1;30m[HIDDEN]�[0m� ���-��1�$�(�!���H�����^[[34mFL^[[31mAG^[[32m{w^[[33msl^[[35m_c^[[36mh^[[31ma^[[32mo^[[33ms^[[35m_u^[[36mn^[[31ml^[[32me^[[33ma^[[35ms^[[36mh^[[31me^[[32md}^[[0m^�I�
+�R_����L&�'����v����W�)��Z�����Q��>�^�j��<� endstream endobj
+^[[1;31mFF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+^[[0m0xDEADC0DE: \x90\x90\x90\x90\xcc\xcc\xcc\xcc\xeb\xfe\xeb\xfe\x31\xc0\xc3
+�[33m[WARN]�[0m Unreadable sectors found. Retrying... (Attempt 1/666)
+01000111 01000001 010100rb 01001111 01010100 01001001 01000011
+jR\xeb\x0dG\x1bZ\x15p\x19\x1fI\x16\x1aM\x1e\x12U\x1a\x1aX\x11\x18Z\x08
+�[1;36m>> CORE DUMP COMPLETE <<�[0m
+�����������������������������������������������������������������������
+^[[1;31m�����������������������������������������������������������������������
+�[0m�[32m[DEBUG]�[0m StArTiNg dUmP... addr: 0x00007FFD89C2E400 size: 4096 bytes
+�[1;33m00000000  7f 45 4c 46 02 01 01 00  00 00 00 00 00 00 00 00  |.ELF............|
+00000010  03 00 3e 00 01 00 00 00  b0 72 02 00 00 00 00 00  |..>......r......|
+00000020  40 00 00 00 00 00 00 00  88 1d 0b 00 00 00 00 00  |@...............|�[0m
+0x00007FFD89C2E430:  \xfd\xde\xad\xbe\xef\x00\xff\x42\x42\x42\x42\x13\x37\x69\x69\x69
+�[1;31m<< SYSTEM CORRUPTION DETECTED >>�[0m
+push rbp; mov rbp, rsp; sub rsp, 16; mov dword [rbp-4], 0; jmp .L2;
+.L3: add dword [rbp-4], 1; .L2: cmp dword [rbp-4], 9; jle .L3;
+���[1;5;31mG L I T C H�[0m��� ���[1;5;32mA C T I V E�[0m���
+%PDF-1.4 %���� 5 0 obj <</Length 6 0 R/Filter /FlateDecode>> stream
+x��]�Mn�0 ��_�\����E� n�^����r�9���[1;30m[HIDDEN]�[0m� ���-��1�$�(�!���H�����^[[34mFL^[[31mAG^[[32m{w^[[33msl^[[35m_c^[[36mh^[[31ma^[[32mo^[[33ms^[[35m_u^[[36mn^[[31ml^[[32me^[[33ma^[[35ms^[[36mh^[[31me^[[32md}^[[0m^�I�
+�R_����L&�'����v����W�)��Z�����Q��>�^�j��<� endstream endobj
+^[[1;31mFF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+^[[0m0xDEADC0DE: \x90\x90\x90\x90\xcc\xcc\xcc\xcc\xeb\xfe\xeb\xfe\x31\xc0\xc3
+�[33m[WARN]�[0m Unreadable sectors found. Retrying... (Attempt 1/666)
+01000111 01000001 010100rb 01001111 01010100 01001001 01000011
+jR\xeb\x0dG\x1bZ\x15p\x19\x1fI\x16\x1aM\x1e\x12U\x1a\x1aX\x11\x18Z\x08
+�[1;36m>> CORE DUMP COMPLETE <<�[0m
+�����������������������������������������������������������������������
+[2026-06-20 23:14:22] WARN  [disk_monitor] /dev/sdb1 usage is at 74%. Free space: 12.4 GB.
+[2026-06-20 23:14:30] INFO  [apt_check] Checked for package updates. 0 packages can be upgraded.
+[2026-06-20 23:15:01] DEBUG [process_worker] Spawning worker thread 0x7f8c1920 (PID: 2304).
+[2026-06-20 23:15:02] DEBUG [process_worker] Spawning worker thread 0x7f8c1945 (PID: 2305).
+[2026-06-20 23:15:05] DEBUG [db_connection] Pooling connection established to local_mysql_db.
+[2026-06-20 23:15:10] INFO  [nginx_server] Worker process 2311 started. Listening on port 80.
+[2026-06-20 23:15:44] WARN  [auth_service] Failed password attempt for invalid user 'admin' from 192.168.1.105
+[2026-06-20 23:16:01] INFO  [cron_daemon] Running hourly cleanup scripts...
+[2026-06-20 23:16:02] DEBUG [cleanup_mod] Truncating /var/log/nginx/access.log.tmp
+[2026-06-20 23:16:15] INFO  [memory_manager] Page cache flushed. Available RAM: 3421 MB.
+[2026-06-20 23:16:40] DEBUG [backup_agent] Scheduled backup skipped: No external drive detected.
+[2026-06-20 23:17:02] INFO  [systemd] Starting Periodic Command Scheduler...
+[2026-06-20 23:17:12] DEBUG [user_manager] User 'guest' requested temporary token. Granted.
+[2026-06-20 23:17:33] WARN  [kernel] Out of memory killer check: system status NOMINAL.
+[2026-06-20 23:18:01] DEBUG [process_worker] Thread 0x7f8c1920 finished execution code 0.
+[2026-06-20 23:18:19] INFO  [security_log] Integrity check passed for binary /usr/bin/sudo.
+[2026-06-20 23:14:01] INFO  [system_init] Initializing WSL Ubuntu subsystem...
+[2026-06-20 23:14:02] INFO  [kernel] Linux version 5.15.0-101-generic (gcc version 11.4.0)
+[2026-06-20 23:14:02] INFO  [systemd] Mounted /mnt/c successfully (drvfs).
+[2026-06-20 23:14:03] DEBUG [network_mod] DHCP solicit sent on eth0...
+[2026-06-20 23:14:05] INFO  [network_mod] DHCP lease acquired, IP: 172.23.41.12
+[2026-06-20 23:14:06] SUCCESS [security_service] Firewall rules loaded successfully.
+[2026-06-20 23:14:10] INFO  [cron_daemon] Started Scheduled Tasks Daemon.
+[2026-06-20 23:14:15] DEBUG [user_manager] Session opened for user 'root' via sshd.
+[2026-06-20 23:14:22] WARN  [disk_monitor] /dev/sdb1 usage is at 74%. Free space: 12.4 GB.
+[2026-06-20 23:14:30] INFO  [apt_check] Checked for package updates. 0 packages can be upgraded.
+[2026-06-20 23:15:01] DEBUG [process_worker] Spawning worker thread 0x7f8c1920 (PID: 2304).
+[2026-06-20 23:15:02] DEBUG [process_worker] Spawning worker thread 0x7f8c1945 (PID: 2305).
+[2026-06-20 23:15:05] DEBUG [db_connection] Pooling connection established to local_mysql_db.
+[2026-06-20 23:15:10] INFO  [nginx_server] Worker process 2311 started. Listening on port 80.
+[2026-06-20 23:15:44] WARN  [auth_service] Failed password attempt for invalid user 'admin' from 192.168.1.105
+[2026-06-20 23:16:01] INFO  [cron_daemon] Running hourly cleanup scripts...
+[2026-06-20 23:16:02] DEBUG [cleanup_mod] Truncating /var/log/nginx/access.log.tmp
+[2026-06-20 23:16:15] INFO  [memory_manager] Page cache flushed. Available RAM: 3421 MB.
+[2026-06-20 23:16:40] DEBUG [backup_agent] Scheduled backup skipped: No external drive detected.
+[2026-06-20 23:17:02] INFO  [systemd] Starting Periodic Command Scheduler...
+[2026-06-20 23:17:12] DEBUG [user_manager] User 'guest' requested temporary token. Granted.
+[2026-06-20 23:17:33] WARN  [kernel] Out of memory killer check: system status NOMINAL.
+[2026-06-20 23:18:01] DEBUG [process_worker] Thread 0x7f8c1920 finished execution code 0.
+[2026-06-20 23:18:19] INFO  [security_log] Integrity check passed for binary /usr/bin/sudo.
+[2026-06-20 23:14:01] INFO  [system_init] Initializing WSL Ubuntu subsystem...
+[2026-06-20 23:14:02] INFO  [kernel] Linux version 5.15.0-101-generic (gcc version 11.4.0)
+[2026-06-20 23:14:02] INFO  [systemd] Mounted /mnt/c successfully (drvfs).
+[2026-06-20 23:14:03] DEBUG [network_mod] DHCP solicit sent on eth0...
+[2026-06-20 23:14:05] INFO  [network_mod] DHCP lease acquired, IP: 172.23.41.12
+[2026-06-20 23:14:06] SUCCESS [security_service] Firewall rules loaded successfully.
+[2026-06-20 23:14:10] INFO  [cron_daemon] Started Scheduled Tasks Daemon.
+[2026-06-20 23:14:15] DEBUG [user_manager] Session opened for user 'root' via sshd.
+[2026-06-20 23:14:22] WARN  [disk_monitor] /dev/sdb1 usage is at 74%. Free space: 12.4 GB.
+[2026-06-20 23:14:30] INFO  [apt_check] Checked for package updates. 0 packages can be upgraded.
+[2026-06-20 23:15:01] DEBUG [process_worker] Spawning worker thread 0x7f8c1920 (PID: 2304).
+[2026-06-20 23:15:02] DEBUG [process_worker] Spawning worker thread 0x7f8c1945 (PID: 2305).
+[2026-06-20 23:15:05] DEBUG [db_connection] Pooling connection established to local_mysql_db.
+[2026-06-20 23:15:10] INFO  [nginx_server] Worker process 2311 started. Listening on port 80.
+[2026-06-20 23:15:44] WARN  [auth_service] Failed password attempt for invalid user 'admin' from 192.168.1.105
+[2026-06-20 23:16:01] INFO  [cron_daemon] Running hourly cleanup scripts...
+[2026-06-20 23:16:02] DEBUG [cleanup_mod] Truncating /var/log/nginx/access.log.tmp
+[2026-06-20 23:16:15] INFO  [memory_manager] Page cache flushed. Available RAM: 3421 MB.
+[2026-06-20 23:16:40] DEBUG [backup_agent] Scheduled backup skipped: No external drive detected.
+[2026-06-20 23:17:02] INFO  [systemd] Starting Periodic Command Scheduler...
+[2026-06-20 23:17:12] DEBUG [user_manager] User 'guest' requested temporary token. Granted.
+[2026-06-20 23:17:33] WARN  [kernel] Out of memory killer check: system status NOMINAL.
+[2026-06-20 23:18:01] DEBUG [process_worker] Thread 0x7f8c1920 finished execution code 0.
+[2026-06-20 23:18:19] INFO  [security_log] Integrity check passed for binary /usr/bin/sudo.
+[2026-06-20 23:19:01] INFO  [process_worker] Thread 0x7f8c1945 recycled successfully.
+[2026-06-20 23:19:12] DEBUG [network_mod] Keep-alive packet sent to gateway 172.23.41.1
+[2026-06-20 23:19:30] INFO  [system_monitor] CPU Temperature: 42C. Fan speed: AUTO.
+[2026-06-20 23:20:00] INFO  [cron_daemon] CRON task (sys-report) completed in 0.42 seconds.
+[2026-06-20 23:20:15] DEBUG [db_connection] Connection closed by remote host (idle timeout).
+[2026-06-20 23:20:45] WARN  [auth_service] 3 failed login attempts from IP 185.220.101.4
+[2026-06-20 23:21:02] INFO  [systemd] Reached target Multi-User System.
+[2026-06-20 23:21:10] DEBUG [user_manager] Session closed for user 'root'.
+[2026-06-20 23:21:59] SUCCESS [system_monitor] All services running optimally.
+[2026-06-20 23:19:01] INFO  [process_worker] Thread 0x7f8c1945 recycled successfully.
+[2026-06-20 23:19:12] DEBUG [network_mod] Keep-alive packet sent to gateway 172.23.41.1
+[2026-06-20 23:19:30] INFO  [system_monitor] CPU Temperature: 42C. Fan speed: AUTO.
+[2026-06-20 23:20:00] INFO  [cron_daemon] CRON task (sys-report) completed in 0.42 seconds.
+[2026-06-20 23:20:15] DEBUG [db_connection] Connection closed by remote host (idle timeout).
+[2026-06-20 23:20:45] WARN  [auth_service] 3 failed login attempts from IP 185.220.101.4
+[2026-06-20 23:21:02] INFO  [systemd] Reached target Multi-User System.
+[2026-06-20 23:21:10] DEBUG [user_manager] Session closed for user 'root'.
+^[[1;31m�����������������������������������������������������������������������
+�[0m�[32m[DEBUG]�[0m StArTiNg dUmP... addr: 0x00007FFD89C2E400 size: 4096 bytes
+�[1;33m00000000  7f 45 4c 46 02 01 01 00  00 00 00 00 00 00 00 00  |.ELF............|
+00000010  03 00 3e 00 01 00 00 00  b0 72 02 00 00 00 00 00  |..>......r......|
+00000020  40 00 00 00 00 00 00 00  88 1d 0b 00 00 00 00 00  |@...............|�[0m
+0x00007FFD89C2E430:  \xfd\xde\xad\xbe\xef\x00\xff\x42\x42\x42\x42\x13\x37\x69\x69\x69
+�[1;31m<< SYSTEM CORRUPTION DETECTED >>�[0m
+push rbp; mov rbp, rsp; sub rsp, 16; mov dword [rbp-4], 0; jmp .L2;
+.L3: add dword [rbp-4], 1; .L2: cmp dword [rbp-4], 9; jle .L3;
+���[1;5;31mG L I T C H�[0m��� ���[1;5;32mA C T I V E�[0m���
+%PDF-1.4 %���� 5 0 obj <</Length 6 0 R/Filter /FlateDecode>> stream
+x��]�Mn�0 ��_�\����E� n�^����r�9���[1;30m[HIDDEN]�[0m� ���-��1�$�(�!���H�����^[[34mFL^[[31mAG^[[32m{w^[[33msl^[[35m_c^[[36mh^[[31ma^[[32mo^[[33ms^[[35m_u^[[36mn^[[31ml^[[32me^[[33ma^[[35ms^[[36mh^[[31me^[[32md}^[[0m^�I�
+�R_����L&�'����v����W�)��Z�����Q��>�^�j��<� endstream endobj
+^[[1;31mFF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+^[[0m0xDEADC0DE: \x90\x90\x90\x90\xcc\xcc\xcc\xcc\xeb\xfe\xeb\xfe\x31\xc0\xc3
+�[33m[WARN]�[0m Unreadable sectors found. Retrying... (Attempt 1/666)
+01000111 01000001 010100rb 01001111 01010100 01001001 01000011
+jR\xeb\x0dG\x1bZ\x15p\x19\x1fI\x16\x1aM\x1e\x12U\x1a\x1aX\x11\x18Z\x08
+�[1;36m>> CORE DUMP COMPLETE <<�[0m
+�����������������������������������������������������������������������
+[2026-06-20 23:21:59] SUCCESS [system_monitor] All services running optimally.
+[2026-06-20 23:18:45] DEBUG [hidden_buffer] Data chunk loaded: ^[[1;31m�����������������������������������������������������������������������
+�[0m�[32m[DEBUG]�[0m StArTiNg dUmP... addr: 0x00007FFD89C2E400 size: 4096 bytes
+�[1;33m00000000  7f 45 4c 46 02 01 01 00  00 00 00 00 00 00 00 00  |.ELF............|
+00000010  03 00 3e 00 01 00 00 00  b0 72 02 00 00 00 00 00  |..>......r......|
+00000020  40 00 00 00 00 00 00 00  88 1d 0b 00 00 00 00 00  |@...............|�[0m
+0x00007FFD89C2E430:  \xfd\xde\xad\xbe\xef\x00\xff\x42\x42\x42\x42\x13\x37\x69\x69\x69
+�[1;31m<< SYSTEM CORRUPTION DETECTED >>�[0m
+push rbp; mov rbp, rsp; sub rsp, 16; mov dword [rbp-4], 0; jmp .L2;
+.L3: add dword [rbp-4], 1; .L2: cmp dword [rbp-4], 9; jle .L3;
+���[1;5;31mG L I T C H�[0m��� ���[1;5;32mA C T I V E�[0m���
+%PDF-1.4 %���� 5 0 obj <</Length 6 0 R/Filter /FlateDecode>> stream
+x��]�Mn�0 ��_�\����E� n�^����r�9���[1;30m[HIDDEN]�[0m� ���-��1�$�(�!���H�����^[[34mFL^[[31mAG^[[32m{w^[[33msl^[[35m_c^[[36mh^[[31ma^[[32mo^[[33ms^[[35m_u^[[36mn^[[31ml^[[32me^[[33ma^[[35ms^[[36mh^[[31me^[[32md}^[[0m^�I�
+�R_����L&�'����v����W�)��Z�����Q��>�^�j��<� endstream endobj
+^[[1;31mFF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+^[[0m0xDEADC0DE: \x90\x90\x90\x90\xcc\xcc\xcc\xcc\xeb\xfe\xeb\xfe\x31\xc0\xc3
+�[33m[WARN]�[0m Unreadable sectors found. Retrying... (Attempt 1/666)
+01000111 01000001 010100rb 01001111 01010100 01001001 01000011
+jR\xeb\x0dG\x1bZ\x15p\x19\x1fI\x16\x1aM\x1e\x12U\x1a\x1aX\x11\x18Z\x08
+�[1;36m>> CORE DUMP COMPLETE <<�[0m.FLAG{y0u_f0und_th3_h1dd3n_l0g_53cr3t}
+[2026-06-20 23:19:01] INFO  [process_worker] Thread 0x7f8c1945 recycled successfully.
+[2026-06-20 23:19:12] DEBUG [network_mod] Keep-alive packet sent to gateway 172.23.41.1
+[2026-06-20 23:19:30] INFO  [system_monitor] CPU Temperature: 42C. Fan speed: AUTO.
+[2026-06-20 23:20:00] INFO  [cron_daemon] CRON task (sys-report) completed in 0.42 seconds.
+[2026-06-20 23:20:15] DEBUG [db_connection] Connection closed by remote host (idle timeout).
+[2026-06-20 23:20:45] WARN  [auth_service] 3 failed login attempts from IP 185.220.101.4
+[2026-06-20 23:21:02] INFO  [systemd] Reached target Multi-User System.
+[2026-06-20 23:21:10] DEBUG [user_manager] Session closed for user 'root'.
+[2026-06-20 23:21:59] SUCCESS [system_monitor] All services running optimally.
+[2026-06-20 23:14:01] INFO  [system_init] Initializing WSL Ubuntu subsystem...
+[2026-06-20 23:14:02] INFO  [kernel] Linux version 5.15.0-101-generic (gcc version 11.4.0)
+[2026-06-20 23:14:02] INFO  [systemd] Mounted /mnt/c successfully (drvfs).
+[2026-06-20 23:14:03] DEBUG [network_mod] DHCP solicit sent on eth0...
+[2026-06-20 23:14:05] INFO  [network_mod] DHCP lease acquired, IP: 172.23.41.12
+[2026-06-20 23:14:06] SUCCESS [security_service] Firewall rules loaded successfully.
+[2026-06-20 23:14:10] INFO  [cron_daemon] Started Scheduled Tasks Daemon.
+[2026-06-20 23:14:15] DEBUG [user_manager] Session opened for user 'root' via sshd.
+[2026-06-20 23:14:22] WARN  [disk_monitor] /dev/sdb1 usage is at 74%. Free space: 12.4 GB.
+[2026-06-20 23:14:30] INFO  [apt_check] Checked for package updates. 0 packages can be upgraded.
+[2026-06-20 23:15:01] DEBUG [process_worker] Spawning worker thread 0x7f8c1920 (PID: 2304).
+[2026-06-20 23:15:02] DEBUG [process_worker] Spawning worker thread 0x7f8c1945 (PID: 2305).
+[2026-06-20 23:15:05] DEBUG [db_connection] Pooling connection established to local_mysql_db.
+[2026-06-20 23:15:10] INFO  [nginx_server] Worker process 2311 started. Listening on port 80.
+[2026-06-20 23:15:44] WARN  [auth_service] Failed password attempt for invalid user 'admin' from 192.168.1.105
+[2026-06-20 23:16:01] INFO  [cron_daemon] Running hourly cleanup scripts...
+[2026-06-20 23:16:02] DEBUG [cleanup_mod] Truncating /var/log/nginx/access.log.tmp
+[2026-06-20 23:16:15] INFO  [memory_manager] Page cache flushed. Available RAM: 3421 MB.
+[2026-06-20 23:16:40] DEBUG [backup_agent] Scheduled backup skipped: No external drive detected.
+[2026-06-20 23:17:02] INFO  [systemd] Starting Periodic Command Scheduler...
+[2026-06-20 23:17:12] DEBUG [user_manager] User 'guest' requested temporary token. Granted.
+[2026-06-20 23:17:33] WARN  [kernel] Out of memory killer check: system status NOMINAL.
+[2026-06-20 23:18:01] DEBUG [process_worker] Thread 0x7f8c1920 finished execution code 0.
+[2026-06-20 23:18:19] INFO  [security_log] Integrity check passed for binary /usr/bin/sudo.
+[2026-06-20 23:19:01] INFO  [process_worker] Thread 0x7f8c1945 recycled successfully.
+[2026-06-20 23:19:12] DEBUG [network_mod] Keep-alive packet sent to gateway 172.23.41.1
+[2026-06-20 23:19:30] INFO  [system_monitor] CPU Temperature: 42C. Fan speed: AUTO.
+[2026-06-20 23:20:00] INFO  [cron_daemon] CRON task (sys-report) completed in 0.42 seconds.
+[2026-06-20 23:20:15] DEBUG [db_connection] Connection closed by remote host (idle timeout).
+[2026-06-20 23:20:45] WARN  [auth_service] 3 failed login attempts from IP 185.220.101.4
+[2026-06-20 23:21:02] INFO  [systemd] Reached target Multi-User System.
+[2026-06-20 23:21:10] DEBUG [user_manager] Session closed for user 'root'.
+[2026-06-20 23:21:59] SUCCESS [system_monitor] All services running optimally.
