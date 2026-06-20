@@ -1,1 +1,15 @@
-<iframe src="https://raw.githubusercontent.com/anfrann25/hackthebasics.gr/00-Introduction/quiz.html" style="width:100%; height:500px; border:none; background:transparent;"></iframe>
+### 📝 Quiz Ενότητας: 01-Networking
+
+{quiz}
+- Ποιο πρωτόκολλο είναι ασφαλές;
+    - [ ] HTTP
+    - [x] HTTPS
+
+- Σε ποιο layer του OSI ανήκει το IP routing;
+    - [x] Network Layer (Layer 3)
+    - [ ] Data Link Layer (Layer 2)
+
+- Τι κάνει το DNS;
+    - [x] Μετατρέπει ονόματα σε IP
+    - [ ] Κρυπτογραφεί αρχεία
+{/quiz}

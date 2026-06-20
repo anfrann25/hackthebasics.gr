@@ -7,11 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-quiz/dist/quiz.min.css">
 </head>
 <body>
   <div id="app">Φόρτωση μαθήματος...</div>
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/docsify-quiz/dist/quiz.min.js"></script>
 
   <script>
     const githubUser = "anfrann25";
@@ -22,43 +25,52 @@
       basePath: `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/main/`,
       loadSidebar: true,
       auto2top: true,
+      
+      // Ρυθμίσεις για το Quiz Plugin
+      quiz: {
+        correctText: '🎉 Σωστά! Μπράβο.',
+        incorrectText: '❌ Λάθος απάντηση, ξαναπροσπάθησε.',
+        checkText: 'Έλεγχος',
+        onAnswersChecked: function(score, total) {
+          // Υπολογισμός ποσοστού επιτυχίας
+          const pct = (score / total) * 100;
+          
+          // Αν είμαστε στην ενότητα του Networking (ελέγχουμε το τρέχον URL)
+          if (window.location.hash.includes('/01-Networking/')) {
+            if (pct >= 70) {
+              alert(`🎉 Πέρασες το Quiz των Δικτύων με ${pct.toFixed(0)}%! Το Linux ξεκλειδώθηκε.`);
+              localStorage.setItem('quiz_01-Networking_passed', 'true');
+              window.location.hash = '#/02-Linux/README';
+            } else {
+              alert(`❌ Σκορ: ${pct.toFixed(0)}%. Χρειάζεσαι τουλάχιστον 70% για να ξεκλειδώσεις το Linux.`);
+            }
+          }
+        }
+      },
 
-      // Plugins του Docsify
       plugins: [
         function(hook, vm) {
-          // Αυτό το hook τρέχει ΚΑΘΕ ΦΟΡΑ πριν αλλάξει σελίδα ο χρήστης
           hook.beforeEach(function(html, next) {
-            // Παίρνουμε το path της σελίδας που πάει να ανοίξει (π.ε. /01-Networking/DNS)
             const route = vm.route.path;
 
-            // 1. Έλεγχος για την ενότητα 01-Networking
+            // Έλεγχος Κλειδώματος για το 01-Networking
             if (route.includes('/01-Networking/')) {
               if (!localStorage.getItem('quiz_00-Introduction_passed')) {
-                alert("🔒 Η ενότητα '01-Networking' είναι κλειδωμένη! Πρέπει πρώτα να περάσεις το Quiz στο τέλος της Εισαγωγής (00-Introduction).");
-                window.location.hash = '#/'; // Τον γυρνάει στην αρχική σελίδα
+                alert("🔒 Πρέπει πρώτα να περάσεις το Quiz της Εισαγωγής!");
+                window.location.hash = '#/';
                 return;
               }
             }
 
-            // 2. Έλεγχος για την ενότητα 02-Linux
+            // Έλεγχος Κλειδώματος για το 02-Linux
             if (route.includes('/02-Linux/')) {
               if (!localStorage.getItem('quiz_01-Networking_passed')) {
-                alert("🔒 Η ενότητα '02-Linux' είναι κλειδωμένη! Πρέπει πρώτα να ολοκληρώσεις το Quiz στο τέλος των Δικτύων (01-Networking).");
-                window.location.hash = '#/01-Networking/README'; // Τον γυρνάει στα δίκτυα
+                alert("🔒 Πρέπει πρώτα να περάσεις το Quiz των Δικτύων!");
+                window.location.hash = '#/01-Networking/README';
                 return;
               }
             }
 
-            // 3. Έλεγχος για την ενότητα 03-Virtual-Lab
-            if (route.includes('/03-Virtual-Lab/')) {
-              if (!localStorage.getItem('quiz_02-Linux_passed')) {
-                alert("🔒 Η ενότητα '03-Virtual-Lab' είναι κλειδωμένη! Πρέπει πρώτα να περάσεις το Quiz του Linux.");
-                window.location.hash = '#/02-Linux/README';
-                return;
-              }
-            }
-
-            // Αν όλα είναι οκ, προχωράει κανονικά στο μάθημα
             next(html);
           });
         }
