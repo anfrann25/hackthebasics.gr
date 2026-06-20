@@ -2,18 +2,18 @@
 
 Το Linux είναι το βασικό λειτουργικό σύστημα που χρησιμοποιείται σε servers, cybersecurity εργαλεία και penetration testing περιβάλλοντα.
 
-Σε αυτό το κεφάλαιο θα μάθεις όχι μόνο εντολές, αλλά και πώς σκέφτεται το Linux.
+Σε αυτό το κεφάλαιο θα μάθεις όχι μόνο εντολές, αλλά και πώς “σκέφτεται” το Linux.
 
 ---
 
 # 🧠 Πώς σκέφτεται το Linux
 
-Στο Linux τα πάντα είναι αρχείο:
+Στο Linux τα πάντα είναι αρχεία:
 
-* Φάκελοι = αρχεία
-* Συσκευές = αρχεία
-* Processes = αρχεία
-* Configuration = αρχεία
+- Φάκελοι = αρχεία  
+- Συσκευές = αρχεία  
+- Processes = αρχεία  
+- Configuration = αρχεία  
 
 Αυτό είναι πολύ σημαντικό για το Cybersecurity.
 
@@ -21,103 +21,138 @@
 
 # 📁 File System Structure
 
-Βασικοί φάκελοι:
+Βασικοί φάκελοι στο Linux:
 
-```text id="fs1"
+```text
 /
-├── home      → χρήστες
-├── etc       → ρυθμίσεις συστήματος
-├── var       → logs & services
-├── bin       → βασικές εντολές
-├── tmp       → προσωρινά αρχεία
+├── home   → χρήστες
+├── etc    → ρυθμίσεις συστήματος
+├── var    → logs & services
+├── bin    → βασικές εντολές
+├── tmp    → προσωρινά αρχεία
 ```
 
 ---
 
 # 🧭 Navigation
 
-## pwd
+## pwd (Print Working Directory)
 
-Δείχνει πού βρίσκεσαι:
+### Τι κάνει
+Δείχνει σε ποιον φάκελο βρίσκεσαι αυτή τη στιγμή.
 
-```bash id="n1"
+### Παράδειγμα
+```bash
 pwd
 ```
 
-## ls
+### Έξοδος
+```text
+/home/student
+```
 
-Δείχνει αρχεία:
+---
 
-```bash id="n2"
+## ls (List)
+
+### Τι κάνει
+Εμφανίζει αρχεία και φακέλους.
+
+### Παράδειγμα
+```bash
 ls
+```
+
+### Με λεπτομέρειες
+```bash
 ls -la
 ```
 
-## cd
+- `-l` → λεπτομέρειες
+- `-a` → κρυφά αρχεία
 
-Μετακίνηση:
+---
 
-```bash id="n3"
+## cd (Change Directory)
+
+### Τι κάνει
+Μετακινείσαι σε άλλο φάκελο.
+
+### Παράδειγμα
+```bash
 cd /home
-cd ..
-cd ~
+```
+
+### Πλοήγηση
+```bash
+cd ..   # πίσω
+cd ~    # home
 ```
 
 ---
 
 # 📂 File Operations
 
-## Δημιουργία
+## touch
 
-```bash id="n4"
-touch file.txt
-mkdir lab
-```
+Δημιουργεί νέο αρχείο:
 
-## Αντιγραφή
-
-```bash id="n5"
-cp file1.txt file2.txt
-```
-
-## Μετακίνηση / Μετονομασία
-
-```bash id="n6"
-mv file.txt /home/user/
-mv old.txt new.txt
-```
-
-## Διαγραφή
-
-```bash id="n7"
-rm file.txt
-rm -r folder/
+```bash
+touch notes.txt
 ```
 
 ---
 
-# 📖 Reading Files
+## mkdir
+
+Δημιουργεί φάκελο:
+
+```bash
+mkdir lab
+```
+
+---
 
 ## cat
 
-```bash id="n8"
-cat file.txt
+Εμφανίζει περιεχόμενο αρχείου:
+
+```bash
+cat notes.txt
 ```
 
-## less
+---
 
-Για μεγάλα αρχεία:
+## cp (Copy)
 
-```bash id="n9"
-less file.txt
+Αντιγραφή αρχείων:
+
+```bash
+cp file1.txt file2.txt
 ```
 
-## head / tail
+---
 
-```bash id="n10"
-head file.txt
-tail file.txt
-tail -f logs.txt
+## mv (Move / Rename)
+
+Μετακίνηση ή μετονομασία:
+
+```bash
+mv file.txt /home/user/
+mv old.txt new.txt
+```
+
+---
+
+## rm (Remove)
+
+Διαγραφή αρχείων:
+
+⚠️ Δεν υπάρχει recycle bin
+
+```bash
+rm file.txt
+rm -r folder/
 ```
 
 ---
@@ -128,114 +163,72 @@ tail -f logs.txt
 
 Βρίσκει αρχεία:
 
-```bash id="n11"
+```bash
 find /home -name "flag.txt"
 ```
+
+---
 
 ## grep
 
 Ψάχνει μέσα σε αρχεία:
 
-```bash id="n12"
+```bash
 grep "flag" file.txt
 ```
 
 ---
 
-# 👤 Users & Permissions
-
-## whoami
-
-```bash id="n13"
-whoami
-```
-
-## id
-
-```bash id="n14"
-id
-```
-
-## permissions
-
-```text id="perm"
-r = read
-w = write
-x = execute
-```
+# 🔐 Permissions
 
 ## chmod
 
-```bash id="n15"
-chmod 777 file.txt
+Αλλάζει δικαιώματα αρχείων:
+
+```bash
 chmod +x script.sh
+./script.sh
 ```
 
 ---
 
-# ⚙️ Processes
+# 🧪 Linux Challenges (CTF Mode)
 
-## ps
+Ο φάκελος `linux_challenges` δεν είναι απλά ασκήσεις.
 
-```bash id="n16"
-ps aux
-```
-
-## top
-
-```bash id="n17"
-top
-```
-
-## kill
-
-```bash id="n18"
-kill -9 PID
-```
+Είναι ένα μικρό **CTF (Capture The Flag) environment** που έχει σχεδιαστεί για να σε βοηθήσει να μάθεις Linux μέσα από πραγματικά σενάρια.
 
 ---
 
-# 🌐 Networking Basics
+# 🎯 Τι είναι αυτό το CTF;
 
-## ip
+Κάθε επίπεδο (`lvl1`, `lvl2`, κτλ.) περιέχει ένα μικρό challenge.
 
-```bash id="n19"
-ip a
+Ο στόχος σου είναι να βρεις το **flag** χρησιμοποιώντας Linux εντολές.
+
+
+--- 
+
+# 📂 Δομή
+
+Κάθε level είναι ένα μικρό puzzle:
+
 ```
-
-## ping
-
-```bash id="n20"
-ping google.com
+linux_challenges/
+├── lvl1
+├── lvl2
+├── lvl3
+├── lvl4
+├── lvl5
 ```
-
-## ports
-
-```bash id="n21"
-ss -tulpn
-```
-
 ---
 
-# 📦 Archives
+# 🔥 Extra Practice
 
-## tar
+Αν σου φανούν εύκολα τα challenges, μπορείς να προχωρήσεις εδώ:
 
-```bash id="n22"
-tar -cvf file.tar folder/
-tar -xvf file.tar
-```
+👉 https://overthewire.org/wargames/bandit/
 
-## gzip
+Το Bandit είναι ένα από τα πιο γνωστά beginner CTF environments για Linux.
 
-```bash id="n23"
-gzip file.txt
-gunzip file.txt.gz
-```
-
-# 🎯 Τι πρέπει να κρατήσεις
-
-* Το Linux είναι file-based system
-* Όλες οι ενέργειες είναι αρχεία
-* Οι βασικές εντολές είναι το 80% της δουλειάς στο Cybersecurity
-* Τα challenges είναι πιο σημαντικά από τη θεωρία
+---
