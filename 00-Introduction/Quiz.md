@@ -39,8 +39,15 @@ function checkSectionQuiz() {
         res.style.color = "#4caf50";
         res.innerHTML = `🎉 Μπράβο! Πέρασες με ${pct.toFixed(0)}%. Η επόμενη ενότητα ξεκλειδώθηκε!`;
         
-        // Ξεκλειδώνει την επόμενη ενότητα!
+        // 1. Αποθήκευση της προόδου
         localStorage.setItem('quiz_01-Networking_passed', 'true');
+        
+        // 2. Μικρό "hack" για να ενημερωθεί το Docsify αμέσως:
+        // Μετά από 1.5 δευτερόλεπτο, σπρώχνει τον χρήστη αυτόματα στο επόμενο README!
+        setTimeout(() => {
+            window.location.hash = '#/02-Linux/README';
+        }, 1500);
+
     } else {
         res.style.color = "#f44336";
         res.innerHTML = `❌ Σκορ: ${pct.toFixed(0)}%. Χρειάζεσαι τουλάχιστον 70% για να συνεχίσεις.`;
