@@ -7,15 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-quiz/dist/quiz.min.css">
 </head>
 <body>
   <div id="app">Φόρτωση μαθήματος...</div>
-
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/docsify-quiz/dist/quiz.min.js"></script>
-
   <script>
     const githubUser = "anfrann25";
     const githubRepo = "hackthebasics.gr";
@@ -24,58 +18,9 @@
       name: '🔒 HackTheBasics.gr',
       basePath: `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/main/`,
       loadSidebar: true,
-      auto2top: true,
-      
-      // Ρυθμίσεις για το Quiz Plugin
-      quiz: {
-        correctText: '🎉 Σωστά! Μπράβο.',
-        incorrectText: '❌ Λάθος απάντηση, ξαναπροσπάθησε.',
-        checkText: 'Έλεγχος',
-        onAnswersChecked: function(score, total) {
-          // Υπολογισμός ποσοστού επιτυχίας
-          const pct = (score / total) * 100;
-          
-          // Αν είμαστε στην ενότητα του Networking (ελέγχουμε το τρέχον URL)
-          if (window.location.hash.includes('/01-Networking/')) {
-            if (pct >= 70) {
-              alert(`🎉 Πέρασες το Quiz των Δικτύων με ${pct.toFixed(0)}%! Το Linux ξεκλειδώθηκε.`);
-              localStorage.setItem('quiz_01-Networking_passed', 'true');
-              window.location.hash = '#/02-Linux/README';
-            } else {
-              alert(`❌ Σκορ: ${pct.toFixed(0)}%. Χρειάζεσαι τουλάχιστον 70% για να ξεκλειδώσεις το Linux.`);
-            }
-          }
-        }
-      },
-
-      plugins: [
-        function(hook, vm) {
-          hook.beforeEach(function(html, next) {
-            const route = vm.route.path;
-
-            // Έλεγχος Κλειδώματος για το 01-Networking
-            if (route.includes('/01-Networking/')) {
-              if (!localStorage.getItem('quiz_00-Introduction_passed')) {
-                alert("🔒 Πρέπει πρώτα να περάσεις το Quiz της Εισαγωγής!");
-                window.location.hash = '#/';
-                return;
-              }
-            }
-
-            // Έλεγχος Κλειδώματος για το 02-Linux
-            if (route.includes('/02-Linux/')) {
-              if (!localStorage.getItem('quiz_01-Networking_passed')) {
-                alert("🔒 Πρέπει πρώτα να περάσεις το Quiz των Δικτύων!");
-                window.location.hash = '#/01-Networking/README';
-                return;
-              }
-            }
-
-            next(html);
-          });
-        }
-      ]
+      auto2top: true
     }
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
 </body>
 </html>

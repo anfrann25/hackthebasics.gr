@@ -1,25 +1,68 @@
-<div style="background: #161b22; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #30363d; color: #c9d1d9;"><h3>📝 Quiz Ενότητας: 01-Networking</h3><p style="color: #8b949e;">Απάντησε σωστά στο 70% (2 στις 3) για να ξεκλειδώσεις το Linux!</p><hr style="border-color: #30363d; margin: 15px 0;"><div style="margin-bottom: 20px;"><p><strong>1. Ποιο πρωτόκολλο είναι ασφαλές;</strong></p><label style="display:block; margin-bottom:5px; cursor:pointer;"><input type="radio" name="net_q1" value="wrong"> HTTP</label><label style="display:block; margin-bottom:5px; cursor:pointer;"><input type="radio" name="net_q1" value="correct"> HTTPS</label></div><div style="margin-bottom: 20px;"><p><strong>2. Σε ποιο layer του OSI ανήκει το IP routing;</strong></p><label style="display:block; margin-bottom:5px; cursor:pointer;"><input type="radio" name="net_q2" value="correct"> Network Layer (Layer 3)</label><label style="display:block; margin-bottom:5px; cursor:pointer;"><input type="radio" name="net_q2" value="wrong"> Data Link Layer (Layer 2)</label></div><div style="margin-bottom: 20px;"><p><strong>3. Τι κάνει το DNS;</strong></p><label style="display:block; margin-bottom:5px; cursor:pointer;"><input type="radio" name="net_q3" value="correct"> Μετατρέπει ονόματα σε IP</label><label style="display:block; margin-bottom:5px; cursor:pointer;"><input type="radio" name="net_q3" value="wrong"> Κρυπτογραφεί αρχεία</label></div><button onclick="checkSectionQuiz()" style="padding: 10px 20px; background: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 6px; cursor: pointer; font-weight: bold;">Υποβολή Απαντήσεων</button><p id="netQuizResult" style="margin-top: 15px; font-weight: bold; font-size: 1.1rem;"></p></div>
+# 📝 Quiz Ενότητας: 01-Networking
+
+Δοκίμασε τις γνώσεις σου στα δίκτυα! Μόλις απαντήσεις σε όλες τις ερωτήσεις, πάτα το κουμπί στο τέλος για να δεις το σκορ σου.
+
+<div id="quiz-container"></div>
+<button id="submit-btn" style="padding: 12px 24px; background: #21262d; color: #c9d1d9; border: 1px solid #30363d; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 20px;">Υποβολή Απαντήσεων</button>
+<div id="quiz-result" style="margin-top: 20px; font-weight: bold; font-size: 1.2rem;"></div>
 
 <script>
-function checkSectionQuiz() {
-    let score = 0;
-    if(document.querySelector('input[name="net_q1"]:checked')?.value === 'correct') score++;
-    if(document.querySelector('input[name="net_q2"]:checked')?.value === 'correct') score++;
-    if(document.querySelector('input[name="net_q3"]:checked')?.value === 'correct') score++;
+// 1. Οι ερωτήσεις του Quiz σου
+const questions = [
+  {
+    id: "q1",
+    title: "1. Ποιο πρωτόκολλο είναι ασφαλές και κρυπτογραφημένο;",
+    answers: ["HTTP", "HTTPS", "FTP"],
+    correct: 1 // Η δεύτερη απάντηση (0-indexed, άρα 0=HTTP, 1=HTTPS)
+  },
+  {
+    id: "q2",
+    title: "2. Σε ποιο layer του OSI μοντέλου ανήκει το IP Routing;",
+    answers: ["Data Link Layer (Layer 2)", "Network Layer (Layer 3)", "Transport Layer (Layer 4)"],
+    correct: 1
+  },
+  {
+    id: "q3",
+    title: "3. Ποια είναι η κύρια λειτουργία του DNS;",
+    answers: ["Να κρυπτογραφεί τα δεδομένα του browser", "Να μετατρέπει ονόματα (π.χ. google.com) σε IP διευθύνσεις", "Να μπλοκάρει τις επιθέσεις DDOS"],
+    correct: 1
+  }
+];
 
-    const pct = (score / 3) * 100;
-    const res = document.getElementById('netQuizResult');
+// 2. Δημιουργία του Quiz στην οθόνη
+const container = document.getElementById('quiz-container');
+container.innerHTML = questions.map((q, qIdx) => `
+  <div style="background: #161b22; padding: 15px; border-radius: 8px; border: 1px solid #30363d; margin-top: 15px;">
+    <p style="font-weight: bold; margin-bottom: 10px; color: #f0f6fc;">${q.title}</p>
+    ${q.answers.map((ans, ansIdx) => `
+      <label style="display: block; margin-bottom: 8px; cursor: pointer; color: #c9d1d9;">
+        <input type="radio" name="${q.id}" value="${ansIdx}" style="margin-right: 8px;">
+        ${ans}
+      </label>
+    `).join('')}
+  </div>
+`).join('');
 
-    if (pct >= 70) {
-        res.style.color = "#4caf50";
-        res.innerHTML = `🎉 Μπράβο! Πέρασες με ${pct.toFixed(0)}%. Η επόμενη ενότητα ξεκλειδώθηκε!`;
-        localStorage.setItem('quiz_01-Networking_passed', 'true');
-        setTimeout(() => {
-            window.location.hash = '#/02-Linux/README';
-        }, 1500);
-    } else {
-        res.style.color = "#f44336";
-        res.innerHTML = `❌ Σκορ: ${pct.toFixed(0)}%. Χρειάζεσαι τουλάχιστον 70% για να συνεχίσεις.`;
+// 3. Έλεγχος Απαντήσεων και Υπολογισμός Σκόρ
+document.getElementById('submit-btn').onclick = function() {
+  let score = 0;
+  
+  questions.forEach(q => {
+    const selected = document.querySelector(`input[name="${q.id}"]:checked`);
+    if (selected && parseInt(selected.value) === q.correct) {
+      score++;
     }
-}
+  });
+
+  const pct = (score / questions.length) * 100;
+  const resultDiv = document.getElementById('quiz-result');
+
+  if (pct >= 70) {
+    resultDiv.style.color = "#4caf50";
+    resultDiv.innerHTML = `🎉 Συγχαρητήρια! Το σκορ σου είναι ${score}/${questions.length} (${pct.toFixed(0)}%). Είσαι έτοιμος για το επόμενο κεφάλαιο!`;
+  } else {
+    resultDiv.style.color = "#f44336";
+    resultDiv.innerHTML = `❌ Προσπάθησε ξανά! Το σκορ σου είναι ${score}/${questions.length} (${pct.toFixed(0)}%). Χρειάζεσαι τουλάχιστον 70% για να περάσεις.`;
+  }
+};
 </script>
