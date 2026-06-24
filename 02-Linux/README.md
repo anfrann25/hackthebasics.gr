@@ -232,13 +232,17 @@ Each level contains a hidden flag that you must discover using Linux commands.
 ---
 
 ## ⚙️ Installation
-```bash
-Στον κεντρικό φάκελο του repository κάνε: 
-    chmod +x setup.sh
-    ./setup.sh
 
+Στον κεντρικό φάκελο του repository κάνε:
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
 Για να κάνεις απεγκατάσταση κάνε: 
-    chmod +x uninstall.sh
-    ./uninstall.sh
+
+```bash
+chmod +x uninstall.sh
+./uninstall.sh
 ```
 ---
