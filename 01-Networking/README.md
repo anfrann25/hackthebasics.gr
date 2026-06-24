@@ -127,3 +127,5 @@ google.com → 142.250.x.x
 - Private & Public IPs
 - Subnets
 - Packet Analysis με Wireshark
+
+> Learn the basics. Build your lab. Start your cybersecurity journey.

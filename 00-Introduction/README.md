@@ -30,3 +30,5 @@
 ## Τι ακολουθεί;
 
 Μετά την ολοκλήρωση αυτού του κεφαλαίου θα προχωρήσουμε στο Networking, το οποίο αποτελεί μία από τις σημαντικότερες βάσεις για όποιον θέλει να ασχοληθεί με το Cybersecurity.
+
+> Learn the basics. Build your lab. Start your cybersecurity journey.
