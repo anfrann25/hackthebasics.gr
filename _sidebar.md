@@ -6,7 +6,7 @@
   * [Cybersecurity Domains](00-Introduction/cybersecurityDomains.md)
 
 * **01. Δικτύωση**
-  * [Introduction](01-Introduction/README.md)
+  * [Introduction](01-Networking/README.md)
   * [OSI Model](01-Networking/OSI-Model.md)
   * [IP Addresses](01-Networking/IP-Addresses.md)
   * [DNS](01-Networking/DNS.md)
@@ -15,5 +15,5 @@
 
 
 * **02. Linux**
-  * [Introduction](02-Introduction/README.md)
+  * [Introduction](02-Linux/README.md)
   * [Basic Linux Commands](02-Linux/README.md)
