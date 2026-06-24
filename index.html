@@ -18,7 +18,8 @@
       name: '🔒 HackTheBasics.gr',
       basePath: `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/main/`,
       loadSidebar: true,
-      auto2top: true
+      auto2top: true,
+      autoHeader: false
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -28,10 +29,14 @@
 <style>
 .markdown-section h1 a,
 .markdown-section h2 a,
-.markdown-section h3 a {
+.markdown-section h3 a,
+.markdown-section h4 a,
+.markdown-section h5 a,
+.markdown-section h6 a {
+    color: inherit !important;
+    text-decoration: none !important;
     pointer-events: none;
     cursor: default;
-    text-decoration: none !important;
 }
 
 .anchor {
