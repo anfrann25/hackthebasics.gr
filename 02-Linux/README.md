@@ -6,7 +6,7 @@
 
 ---
 
-# 🧠 Πώς σκέφτεται το Linux
+# Πώς σκέφτεται το Linux
 
 Στο Linux τα πάντα είναι αρχεία:
 
@@ -19,7 +19,7 @@
 
 ---
 
-# 📁 File System Structure
+#  File System Structure
 
 Βασικοί φάκελοι στο Linux:
 
@@ -34,7 +34,7 @@
 
 ---
 
-# 🧭 Navigation
+#  Navigation
 
 ## pwd (Print Working Directory)
 
@@ -91,7 +91,7 @@ cd ~    # home
 
 ---
 
-# 📂 File Operations
+#  File Operations
 
 ## touch
 
@@ -157,7 +157,7 @@ rm -r folder/
 
 ---
 
-# 🔎 Searching
+#  Searching
 
 ## find
 
@@ -179,7 +179,7 @@ grep "flag" file.txt
 
 ---
 
-# 🔐 Permissions
+#  Permissions
 
 ## chmod
 
@@ -192,7 +192,7 @@ chmod +x script.sh
 
 ---
 
-# 🧪 Linux Challenges (CTF Mode)
+#  Linux Challenges (CTF Mode)
 
 Ο φάκελος `linux_challenges` δεν είναι απλά ασκήσεις.
 
@@ -200,7 +200,7 @@ chmod +x script.sh
 
 ---
 
-# 🎯 Τι είναι αυτό το CTF;
+#  Τι είναι αυτό το CTF;
 
 Κάθε επίπεδο (`lvl1`, `lvl2`, κτλ.) περιέχει ένα μικρό challenge.
 
@@ -209,7 +209,7 @@ chmod +x script.sh
 
 --- 
 
-# 📂 Δομή
+#  Δομή
 
 Κάθε level είναι ένα μικρό puzzle:
 
@@ -223,7 +223,7 @@ linux_challenges/
 ```
 ---
 
-## ⚙️ Installation
+##  Installation
 
 `Στον κεντρικό φάκελο του repository κάνε:`
 
