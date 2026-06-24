@@ -13,5 +13,4 @@
 
 
 * **02. Linux**
-  * [Introduction](02-Linux/README.md)
   * [Basic Linux Commands](02-Linux/README.md)
