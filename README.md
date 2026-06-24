@@ -20,7 +20,7 @@ Introduction
    ↓
 Networking
    ↓
-Linux
+Linux Basics
    ↓
 Virtual Labs
    ↓
