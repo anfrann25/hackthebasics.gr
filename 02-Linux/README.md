@@ -223,14 +223,6 @@ linux_challenges/
 ```
 ---
 
-# 🐧 Linux Challenges
-
-A Linux-based CTF-style challenge collection (lvl1 - lvl100).
-
-Each level contains a hidden flag that you must discover using Linux commands.
-
----
-
 ## ⚙️ Installation
 
 `Στον κεντρικό φάκελο του repository κάνε:`
