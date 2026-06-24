@@ -10,7 +10,6 @@
   * [DNS](01-Networking/DNS.md)
   * [HTTP-HTTPS](01-Networking/HTTP-HTTPS.md)
   * [Ports](01-Networking/Ports.md)
-  * [Quiz](01-Networking/Quiz.md)
 
 
 * **02. Linux**
