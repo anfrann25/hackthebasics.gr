@@ -3,7 +3,6 @@
 * **00. Εισαγωγή**
   * [Τι είναι το Cybersecurity;](00-Introduction/whatIsCybersecurity.md)
   * [Cybersecurity Domains](00-Introduction/cybersecurityDomains.md)
-  * [Quiz](00-Introduction/Quiz.md)
 
 * **01. Δικτύωση**
   * [OSI Model](01-Networking/OSI-Model.md)
