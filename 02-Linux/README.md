@@ -223,12 +223,28 @@ linux_challenges/
 ```
 ---
 
-# 🔥 Extra Practice
+# 🐧 Linux Challenges
 
-Αν σου φανούν εύκολα τα challenges, μπορείς να προχωρήσεις εδώ:
+A Linux-based CTF-style challenge collection (lvl1 - lvl100).
 
-👉 https://overthewire.org/wargames/bandit/
+Each level contains a hidden flag that you must discover using Linux commands.
 
-Το Bandit είναι ένα από τα πιο γνωστά beginner CTF environments για Linux.
+---
+
+## ⚙️ Installation
+    Στον κεντρικό φάκελο του repository κάνε: 
+
+```bash
+    chmod +x setup.sh
+    ./setup.sh
+```
+
+    Για να κάνεις απεγκατάσταση κάνε:
+    
+```bash
+    chmod +x uninstall.sh
+    ./uninstall.sh
+```
+
 
 ---
