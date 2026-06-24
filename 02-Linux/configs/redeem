@@ -1,0 +1,143 @@
+#!/bin/bash
+
+SCORE_FILE="$HOME/.linux_challenges_score"
+PROGRESS_FILE="$HOME/.linux_challenges_progress"
+
+show_usage() {
+    echo "Usage:"
+    echo "  redeem -f <flag> -l <level>"
+    echo "  redeem --score"
+    echo "  redeem --progress"
+    echo "  redeem --reset"	   
+ exit 1
+}
+
+# Reset command
+if [ "$1" = "--reset" ]; then
+
+    read -p "Are you sure? This will delete all progress. (y/N): " CONFIRM
+
+    if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
+        rm -f "$SCORE_FILE"
+        rm -f "$PROGRESS_FILE"
+        echo "🔄 Progress and score reset successfully."
+    else
+        echo "Cancelled."
+    fi
+
+    exit 0
+fi
+
+# Score command
+if [ "$1" = "--score" ]; then
+
+    SCORE=$(cat "$SCORE_FILE" 2>/dev/null || echo 0)
+
+    if [ -f "$PROGRESS_FILE" ]; then
+        COMPLETED=$(wc -l < "$PROGRESS_FILE")
+    else
+        COMPLETED=0
+    fi
+
+    echo "🏆 Total Score: $SCORE"
+    echo "📚 Completed Levels: $COMPLETED"
+
+    exit 0
+fi
+
+# Progress command
+if [ "$1" = "--progress" ]; then
+
+    echo "📚 Completed Levels:"
+
+    if [ -f "$PROGRESS_FILE" ]; then
+        sort -n "$PROGRESS_FILE"
+    else
+        echo "None"
+    fi
+
+    exit 0
+fi
+
+while getopts "f:l:" opt; do
+    case $opt in
+        f) FLAG="$OPTARG" ;;
+        l) LEVEL="$OPTARG" ;;
+        *) show_usage ;;
+    esac
+done
+
+if [ -z "$FLAG" ] || [ -z "$LEVEL" ]; then
+    show_usage
+fi
+
+#
+# HARDCODED FLAGS
+#
+declare -A FLAGS
+
+FLAGS[1]="ee6e4804ee09663bfefff397f3333347a600ff84a4517bc6e08e743275d92c18"
+FLAGS[2]="117f90082072e3f18cac0b372b73df528a4ca601e4d077f5119f54567c055adc"
+FLAGS[3]="y0u_f0und_th3_h1dd3n_l0g_53cr3t"
+FLAGS[4]="49bfae82063ce397b5a5acf2e2766a5ba73b443c7335690e6145190ca6037a75"
+FLAGS[5]="02052e4409b679c7226c7c798410425077ef11874dc0a51cc9dc5840fdfee2c3"
+FLAGS[6]="12345678910"
+FLAGS[7]="E2mwHInF9yI5KZUhu4qHUg5/3xFoDGKomMWo4DJDYsk={NC}"
+FLAGS[8]="3f393b039916af0c40cd91d23c0b6a94a8385becfb426a312edcecc8ae55c4a9"
+FLAGS[9]="761496791b8e5990363c1c5107b6a7f44a1340d67b038906af5b08b5bae6d1e3"
+FLAGS[10]="123f98787e46f4723557c50e15c68ca3372523285541e71846f03f8c3be3efefs"
+
+
+
+CORRECT_FLAG="${FLAGS[$LEVEL]}"
+
+if [ -z "$CORRECT_FLAG" ]; then
+    echo "❌ Level $LEVEL does not exist."
+    exit 1
+fi
+
+if [ "$FLAG" != "$CORRECT_FLAG" ]; then
+    echo "❌ Incorrect flag."
+    exit 1
+fi
+
+# Create files if missing
+touch "$PROGRESS_FILE"
+touch "$SCORE_FILE"
+
+# Initialize score file
+if ! grep -q '^[0-9]\+$' "$SCORE_FILE"; then
+    echo "0" > "$SCORE_FILE"
+fi
+
+# Prevent duplicate submissions
+if grep -qx "$LEVEL" "$PROGRESS_FILE"; then
+    echo "✅ Correct flag!"
+    echo "⚠️ Level already completed."
+    echo "🏆 Score: $(cat "$SCORE_FILE")"
+    exit 0
+fi
+
+# Save progress
+echo "$LEVEL" >> "$PROGRESS_FILE"
+
+CURRENT_SCORE=$(cat "$SCORE_FILE")
+
+# Example scoring
+POINTS=$((LEVEL * 10))
+
+NEW_SCORE=$((CURRENT_SCORE + POINTS))
+
+echo "$NEW_SCORE" > "$SCORE_FILE"
+
+echo "✅ Correct flag for level $LEVEL"
+echo "🎯 Points earned: $POINTS"
+echo "🏆 Total Score: $NEW_SCORE"
+
+NEXT_LEVEL=$((LEVEL + 1))
+
+if [ -n "${FLAGS[$NEXT_LEVEL]}" ]; then
+    echo "🔓 Next level: lvl$NEXT_LEVEL"
+else
+    echo "🏆 Congratulations! You completed all available levels."
+fi
