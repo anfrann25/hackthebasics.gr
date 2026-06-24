@@ -1,5 +1,3 @@
-* [🏠 Αρχική](README.md)
-
 * **00. Εισαγωγή**
   * [Introduction](00-Introduction/README.md)
   * [Τι είναι το Cybersecurity;](00-Introduction/whatIsCybersecurity.md)
