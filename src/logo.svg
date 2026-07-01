@@ -1,5 +1,11 @@
-<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-  <rect width="60" height="60" rx="12" fill="#0d0d0d"/>
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Symbol -->
+  <rect x="0" y="0" width="60" height="60" rx="12" fill="#0d0d0d"/>
   <path d="M18 20 L26 30 L18 40" stroke="#00ff99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <rect x="30" y="28" width="12" height="4" fill="#00ff99"/>
+
+  <!-- Text -->
+  <text x="80" y="38" font-family="Inter, sans-serif" font-size="24" fill="#ffffff">
+    HackTheBasics
+  </text>
 </svg>
