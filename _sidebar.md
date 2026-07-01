@@ -15,7 +15,6 @@
 * **02. Linux**
   * [Basic Linux Commands](02-Linux/README.md)
 
-
 * **03. Virtual-Lab**
   * [Introduction](03-Virtual-Lab/README.md)
   * [Τι είναι Virtual Machine;](03-Virtual-Lab/What-is-a-Virtual-Machine.md)
