@@ -6,17 +6,15 @@
 
 ---
 
-## 📥 Βήμα 1: Κατέβασμα Kali ISO
+##  Βήμα 1: Κατέβασμα Kali ISO
 
-Κατέβασε την τελευταία έκδοση από:
-
-👉 https://www.kali.org/get-kali/#kali-installer-images
+Κατέβασε την τελευταία έκδοση από: https://www.kali.org/get-kali/#kali-installer-images
 
 Επίλεξε **Installer ISO**.
 
 ---
 
-## 🆕 Βήμα 2: Δημιουργία νέου VM
+##  Βήμα 2: Δημιουργία νέου VM
 
 1. VirtualBox → **New**
 2. Name: `Kali Linux`
@@ -26,7 +24,7 @@
 
 ---
 
-## 🧠 Βήμα 3: RAM
+##  Βήμα 3: RAM
 
 Προτείνεται:
 
@@ -34,7 +32,7 @@
 
 ---
 
-## 💾 Βήμα 4: Virtual Hard Disk
+##  Βήμα 4: Virtual Hard Disk
 
 - Create a virtual hard disk now  
 - VDI  
@@ -43,7 +41,7 @@
 
 ---
 
-## 📀 Βήμα 5: Φόρτωση ISO
+##  Βήμα 5: Φόρτωση ISO
 
 1. Settings → Storage
 2. Empty Disk → Choose a disk file
@@ -51,7 +49,7 @@
 
 ---
 
-## ▶️ Βήμα 6: Εγκατάσταση
+##  Βήμα 6: Εγκατάσταση
 
 1. Start
 2. **Graphical Install**
@@ -66,6 +64,6 @@
 
 ---
 
-## 🎉 Τι ακολουθεί;
+##  Τι ακολουθεί;
 
 Θα μάθεις πώς να χρησιμοποιείς **Snapshots** για να προστατεύεις το εργαστήριό σου.

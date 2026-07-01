@@ -14,7 +14,7 @@
 
 ---
 
-## 🔽 Βήμα 1: Κατέβασμα του VirtualBox
+## Βήμα 1: Κατέβασμα του VirtualBox
 
 Πήγαινε στη σελίδα: https://www.virtualbox.org/wiki/Downloads
 
