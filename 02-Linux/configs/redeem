@@ -131,13 +131,13 @@ NEW_SCORE=$((CURRENT_SCORE + POINTS))
 echo "$NEW_SCORE" > "$SCORE_FILE"
 
 echo "✅ Correct flag for level $LEVEL"
-echo "🎯 Points earned: $POINTS"
-echo "🏆 Total Score: $NEW_SCORE"
+echo " Points earned: $POINTS"
+echo " Total Score: $NEW_SCORE"
 
 NEXT_LEVEL=$((LEVEL + 1))
 
 if [ -n "${FLAGS[$NEXT_LEVEL]}" ]; then
-    echo "🔓 Next level: lvl$NEXT_LEVEL"
+    echo " Next level: lvl$NEXT_LEVEL"
 else
     echo "🏆 Congratulations! You completed all available levels."
 fi
