@@ -6,14 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  <!-- Dark Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/dark.css">
 
-  <!-- Custom CSS -->
+  <!-- Custom CSS (χωρίς αλλαγή χρωμάτων) -->
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .markdown-section { max-width: 900px; margin: auto; padding: 40px; }
-    h1, h2, h3 { font-weight: 600; }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .markdown-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+    }
+
+    /* Sidebar μικρή βελτίωση */
+    .sidebar-nav li a {
+      font-size: 15px;
+      padding: 6px 12px;
+    }
   </style>
 </head>
 
@@ -26,7 +42,7 @@
 
     window.$docsify = {
       name: 'HackTheBasics.gr',
-      logo: 'logo.png',
+      logo: 'logo.png',   // Αν δεν έχεις logo, απλά σβήστο
       basePath: `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/main/`,
       loadSidebar: true,
       auto2top: true,
