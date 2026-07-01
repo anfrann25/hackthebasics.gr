@@ -6,7 +6,7 @@
 
 ---
 
-## 🧰 Τι θα χρειαστείς
+##  Τι θα χρειαστείς
 
 - Έναν υπολογιστή με Windows, macOS ή Linux
 - Σύνδεση στο Internet
@@ -16,9 +16,7 @@
 
 ## 🔽 Βήμα 1: Κατέβασμα του VirtualBox
 
-Πήγαινε στη σελίδα:
-
-👉 https://www.virtualbox.org/wiki/Downloads
+Πήγαινε στη σελίδα: https://www.virtualbox.org/wiki/Downloads
 
 Επίλεξε το installer ανάλογα με το λειτουργικό σου:
 
@@ -28,16 +26,16 @@
 
 ---
 
-## 💿 Βήμα 2: Εγκατάσταση
+##  Βήμα 2: Εγκατάσταση
 
-### 🪟 Windows
+###  Windows
 
 1. Άνοιξε το αρχείο `.exe`
 2. Πάτα **Next** σε όλα τα βήματα
 3. Επίλεξε **Install**
 4. Πάτα **Finish**
 
-### 🍎 macOS
+###  macOS
 
 1. Άνοιξε το `.dmg`
 2. Κάνε διπλό κλικ στο **VirtualBox.pkg**
@@ -45,7 +43,7 @@
 4. Αν εμφανιστεί μήνυμα ασφαλείας:
    - *System Settings → Privacy & Security → Allow*
 
-### 🐧 Linux (Ubuntu / Debian)
+###  Linux (Ubuntu / Debian)
 
 Μπορείς να το εγκαταστήσεις με package manager:
 
