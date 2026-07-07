@@ -59,3 +59,5 @@
 ## ➡️ Επόμενο κεφάλαιο
 
 Στο επόμενο μάθημα θα εγκαταστήσουμε την Python και θα γράψουμε το πρώτο μας πρόγραμμα.
+
+> Learn the basics. Build your lab. Start your cybersecurity journey.

@@ -225,18 +225,18 @@ linux_challenges/
 
 ##  Installation
 
-`Στον φάκελο 02-Linux του repository κάνε:`
+`Στον main φάκελο του repository κάνε:`
 
 ```bash
-cd configs
 chmod +x setup.sh
 ./setup.sh
 ```
 `Για να κάνεις απεγκατάσταση κάνε:`
 
 ```bash
-cd configs
 chmod +x uninstall.sh
 ./uninstall.sh
 ```
 ---
+
+> Learn the basics. Build your lab. Start your cybersecurity journey.

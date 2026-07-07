@@ -20,3 +20,5 @@
 ## Στόχος
 
 Στο τέλος αυτού του κεφαλαίου θα έχεις ένα πλήρως λειτουργικό εργαστήριο, έτοιμο για τα επόμενα μαθήματα και τα labs του HackTheBasics.
+
+> Learn the basics. Build your lab. Start your cybersecurity journey.
