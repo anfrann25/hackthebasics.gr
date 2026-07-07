@@ -22,3 +22,12 @@
   * [Εγκατάσταση Ubuntu](03-Virtual-Lab/Installing-Ubuntu.md)
   * [Εγκατάσταση Kali Linux](03-Virtual-Lab/Installing-Kali-Linux.md)
   * [Τι είναι τα Snapshots](03-Virtual-Lab/Snapshots.md)
+
+* **04. Python-Basics**
+  * [Introduction](04-Python-Basics/README.md)
+  * [Πρώτη επαφή](04-Python-Basics/Python-Introduction.md)
+  * [Μεταβλητές και Τύποι Δεδομένων](04-Python-Basics/Variables-and-Data-Types.md)
+  * [Έλεγχοι Ροής](04-Python-Basics/Conditions-and-Loops.md)
+  * [Συναρτήσεις](04-Python-Basics/Functions.md)
+  * [Python σε αρχεία](04-Python-Basics/Working-with-Files.md)
+  * [Python-Challenges](04-Python-Basics/Challenges.md)
