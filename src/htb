@@ -1,0 +1,95 @@
+#!/bin/bash
+
+# Στοχεύουμε στα ίδια ακριβώς αρχεία που έχεις στο redeem σου
+SCORE_FILE="$HOME/.linux_challenges_score"
+PROGRESS_FILE="$HOME/.linux_challenges_progress"
+
+SUBCOMMAND="$1"
+
+show_usage() {
+    echo "🔒 HackTheBasics (htb) CLI Tool"
+    echo "Usage:"
+    echo "  htb redeem -m <module> -l <level> -f <flag> # Εξαργύρωση Flag"
+    echo "  htb test <file.py> -l <level>               # Έλεγχος Python κώδικα"
+    echo "  htb score                                   # Προβολή συνολικού σκορ"
+    echo "  htb progress                                # Προβολή ολοκληρωμένων levels"
+    echo "  htb reset                                   # Μηδενισμός προόδου"
+    exit 1
+}
+
+if [ -z "$SUBCOMMAND" ]; then
+    show_usage
+fi
+
+# ==========================================
+# SUBCOMMAND: SCORE (Μεταφέρθηκε εδώ)
+# ==========================================
+if [ "$SUBCOMMAND" = "score" ]; then
+    SCORE=$(cat "$SCORE_FILE" 2>/dev/null || echo 0)
+    if [ -f "$PROGRESS_FILE" ]; then
+        COMPLETED=$(wc -l < "$PROGRESS_FILE")
+    else
+        COMPLETED=0
+    fi
+    echo "🏆 Total Score: $SCORE"
+    echo "📚 Completed Levels: $COMPLETED"
+    exit 0
+fi
+
+# ==========================================
+# SUBCOMMAND: PROGRESS (Μεταφέρθηκε εδώ)
+# ==========================================
+if [ "$SUBCOMMAND" = "progress" ]; then
+    echo "📚 Completed Levels:"
+    if [ -s "$PROGRESS_FILE" ]; then
+        sort -V "$PROGRESS_FILE" | sed 's/:/ -> Level /'
+    else
+        echo "None"
+    fi
+    exit 0
+fi
+
+# ==========================================
+# SUBCOMMAND: RESET (Μεταφέρθηκε εδώ)
+# ==========================================
+if [ "$SUBCOMMAND" = "reset" ]; then
+    read -p "Are you sure? This will delete all progress. (y/N): " CONFIRM
+    if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
+        rm -f "$SCORE_FILE"
+        rm -f "$PROGRESS_FILE"
+        echo "🔄 Progress and score reset successfully."
+    else
+        echo "Cancelled."
+    fi
+    exit 0
+fi
+
+# ==========================================
+# SUBCOMMAND: TEST
+# ==========================================
+if [ "$SUBCOMMAND" = "test" ]; then
+    USER_FILE="$2"
+    shift 2
+    while getopts "l:" opt; do
+        case $opt in
+            l) LEVEL="$OPTARG" ;;
+            *) show_usage ;;
+        esac
+    done
+
+    if [ -z "$USER_FILE" ] || [ -z "$LEVEL" ]; then show_usage; fi
+    python3 /usr/local/bin/test.py "$LEVEL" "$USER_FILE"
+    exit 0
+fi
+
+# ==========================================
+# SUBCOMMAND: REDEEM
+# ==========================================
+if [ "$SUBCOMMAND" = "redeem" ]; then
+    shift
+    # Καλεί το δικό σου redeem περνώντας του όλα τα flags (-m, -l, -f)
+    /usr/local/bin/redeem "$@"
+    exit 0
+fi
+
+show_usage

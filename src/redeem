@@ -1,0 +1,76 @@
+#!/bin/bash
+
+SCORE_FILE="$HOME/.linux_challenges_score"
+PROGRESS_FILE="$HOME/.linux_challenges_progress"
+
+show_usage() {
+    echo "Usage: redeem -m <module> -l <level> -f <flag>"
+    exit 1
+}
+
+while getopts "m:f:l:" opt; do
+    case $opt in
+        m) MODULE="$OPTARG" ;;
+        f) FLAG="$OPTARG" ;;
+        l) LEVEL="$OPTARG" ;;
+        *) show_usage ;;
+    esac
+done
+
+if [ -z "$MODULE" ] || [ -z "$FLAG" ] || [ -z "$LEVEL" ]; then
+    show_usage
+fi
+
+# HARDCODED FLAGS
+if [ "$MODULE" = "linux" ]; then
+    declare -A FLAGS
+    FLAGS[1]="ee6e4804ee09663bfefff397f3333347a600ff84a4517bc6e08e743275d92c18"
+    FLAGS[2]="117f90082072e3f18cac0b372b73df528a4ca601e4d077f5119f54567c055adc"
+    FLAGS[3]="y0u_f0und_th3_h1dd3n_l0g_53cr3t"
+    FLAGS[4]="49bfae82063ce397b5a5acf2e2766a5ba73b443c7335690e6145190ca6037a75"
+    FLAGS[5]="f6f0619a6fa9842c297117bb0da5a6def01008e065332655d8872657f095e876"
+    FLAGS[6]="12345678910"
+    FLAGS[7]="E2mwHInF9yI5KZUhu4qHUg5/3xFoDGKomMWo4DJDYsk="
+    FLAGS[8]="3f393b039916af0c40cd91d23c0b6a94a8385becfb426a312edcecc8ae55c4a9"
+    FLAGS[9]="761496791b8e5990363c1c5107b6a7f44a1340d67b038906af5b08b5bae6d1e3"
+    FLAGS[10]="123f98787e46f4723557c50e15c68ca3372523285541e71846f03f8c3be3efefs"
+elif [ "$MODULE" = "python" ]; then
+    declare -A FLAGS
+    FLAGS[1]="SFRCe3B5dGgwbl9oM2xsMF93MHJsZF9sMX0="
+    FLAGS[2]="SFRCe3B5dGgwbl92NHIxNGJsM3NfbDJ9"
+    FLAGS[3]="SFRCe200dGhfNG5kXzFucHV0X2wzfQ=="
+    FLAGS[4]="SFRCe2MwbmQxdDEwbjRsc19mMXIzdzRsbF9sNH0="
+    FLAGS[5]="SFRCe2JydXQzX2YwcmMxbmdfdzF0aF9sMDBwc19sNX0="
+    FLAGS[6]="SFRCe2Z1bmN0MTBuNV80cjNfcDB3M3JmdTFfbDZ9"
+    FLAGS[7]="SFRCe2YxbDNfaDRuZGwxbmdfYjRzMWNzX2w3fQ=="
+else
+    echo "❌ Invalid module. Choose 'linux' or 'python'."
+    exit 1
+fi
+
+CORRECT_FLAG="${FLAGS[$LEVEL]}"
+
+if [ -z "$CORRECT_FLAG" ] || [ "$FLAG" != "$CORRECT_FLAG" ]; then
+    echo "❌ Incorrect flag or level does not exist."
+    exit 1
+fi
+
+touch "$PROGRESS_FILE" "$SCORE_FILE"
+if ! grep -q '^[0-9]\+$' "$SCORE_FILE"; then echo "0" > "$SCORE_FILE"; fi
+
+if grep -qx "$MODULE:$LEVEL" "$PROGRESS_FILE"; then
+    echo "✅ Correct flag!"
+    echo "⚠️ Level already completed."
+    echo "🏆 Score: $(cat "$SCORE_FILE")"
+    exit 0
+fi
+
+echo "$MODULE:$LEVEL" >> "$PROGRESS_FILE"
+CURRENT_SCORE=$(cat "$SCORE_FILE")
+POINTS=$((LEVEL * 10))
+NEW_SCORE=$((CURRENT_SCORE + POINTS))
+echo "$NEW_SCORE" > "$SCORE_FILE"
+
+echo "✅ Correct flag for $MODULE level $LEVEL"
+echo " Points earned: $POINTS"
+echo " Total Score: $NEW_SCORE"
