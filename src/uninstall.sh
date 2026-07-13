@@ -22,12 +22,20 @@ else
     echo "ℹ️ redeem is not installed."
 fi
 
-# Remove redeem command
+# Remove htb command
 if [ -f "/usr/local/bin/htb" ]; then
     sudo rm -f /usr/local/bin/htb
     echo "✅ Removed htb command."
 else
     echo "ℹ️ htb is not installed."
+fi
+
+# Remove test command
+if [ -f "/usr/local/bin/test.py" ]; then
+    sudo rm -f /usr/local/bin/test.py
+    echo "✅ Removed test command."
+else
+    echo "ℹ️ test.py is not installed."
 fi
 
 # Remove score file
