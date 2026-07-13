@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 set -e
 
 echo "Linux Challenges Uninstaller"
@@ -22,6 +20,14 @@ if [ -f "/usr/local/bin/redeem" ]; then
     echo "✅ Removed redeem command."
 else
     echo "ℹ️ redeem is not installed."
+fi
+
+# Remove redeem command
+if [ -f "/usr/local/bin/htb" ]; then
+    sudo rm -f /usr/local/bin/htb
+    echo "✅ Removed htb command."
+else
+    echo "ℹ️ htb is not installed."
 fi
 
 # Remove score file
