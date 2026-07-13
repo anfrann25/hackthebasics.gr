@@ -1,0 +1,4 @@
+Xroot:x:0:0:root:/root:/bin/bash
+Xbin:x:1:1:bin:/bin:/sbin/nologin
+Xdaemon:x:2:2:daemon:/sbin:/sbin/nologin
+XHTB_FLAG_IS_HERE
