@@ -1,1 +1,0 @@
-echo "Your flag is : 49bfae82063ce397b5a5acf2e2766a5ba73b443c7335690e6145190ca6037a75"
