@@ -1,4 +1,4 @@
-# 🇬🇷 HackTheBasics
+# HackTheBasics
 
 Ένα ελληνικό Cybersecurity Journey για αρχάριους.
 
