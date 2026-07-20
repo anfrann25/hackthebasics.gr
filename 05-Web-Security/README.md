@@ -5,7 +5,7 @@
 ## Περιεχόμενα
 
 1. How the Web Works
-2. HTTP Basics
+2. HTTP Basics/Fundamentals
 3. Authentication & Sessions
 4. Web Challenges (CTF)
 
