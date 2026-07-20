@@ -7,7 +7,6 @@
 1. How the Web Works
 2. HTTP Basics
 3. Authentication & Sessions
-4. Browser Developer Tools
-5. Web Challenges (CTF)
+4. Web Challenges (CTF)
 
 > Μην προχωρήσεις στα Web Attacks αν δεν κατανοήσεις πρώτα αυτά τα κεφάλαια.
