@@ -241,8 +241,17 @@ chmod +x uninstall.sh
 ## Docker Installation
 ```bash
     sudo docker build -f 02-Linux/Dockerfile -t hackthebasics .
-    sudo docker run -it --rm hackthebasics
+    sudo docker run -it --name linux-lab hackthebasics
 ```
 
+`Για να βγείς από το docker`
+```bash
+   exit
+```
+
+`Για να ξαναμπείς στο docker`
+```bash
+   sudo docker start -ai linux-lab
+```
 ---
 > Learn the basics. Build your lab. Start your cybersecurity journey.
