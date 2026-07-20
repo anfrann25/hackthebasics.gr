@@ -19,14 +19,19 @@ RUN useradd -m -s /bin/bash player && \
 RUN echo "player ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # 4. Αντιγραφή όλων των challenges μέσα στον φάκελο του player
-COPY linux_challenges/ /home/player/linux_challenges/
+COPY ../02-Linux/linux_challenges/ /home/player/linux_challenges/
 # Αντιγραφή του setup.sh μέσα στο container
-COPY configs/setup.sh /root/setup.sh
-COPY configs/uninstall.sh /root/uninstall.sh
-COPY configs/redeem /root/redeem
+COPY ../src/setup.sh /root/setup.sh
+COPY ../src/uninstall.sh /root/uninstall.sh
+COPY ../src/redeem /root/redeem
+COPY ../src/htb /root/htb
+COPY ../src/test.py /root/test.py
 
 # 2. Δίνουμε δικαιώματα εκτέλεσης στα scripts
 RUN chmod +x /root/setup.sh
+RUN chmod +x /root/uninstall.sh
+RUN chmod +x /root/redeem
+RUN chmod +x /root/htb
 
 WORKDIR /root
 
