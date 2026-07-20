@@ -243,4 +243,6 @@ chmod +x uninstall.sh
     sudo docker build -f 02-Linux/Dockerfile -t hackthebasics .
     sudo docker run -it --rm hackthebasics
 ```
+
+---
 > Learn the basics. Build your lab. Start your cybersecurity journey.
