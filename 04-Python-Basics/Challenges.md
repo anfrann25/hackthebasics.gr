@@ -85,6 +85,17 @@ htb redeem -m python -l 3 -f HTB{example_flag}
 | `htb score` | Δείχνει την πρόοδο σου |     
 ---
 
+## Installation
+
+`Για να ξεκινήσεις το challenge πρέπει να συνδεθέις στο ίδιο docker που είχαμε συνδεθεί στο κεφάλαιο: 02-Linux, όμως πρίν από αυτό θα πρέπει να βάλουμε τα python_challenges στο παιχνίδι.`
+
+```bash
+    sudo docker cp 04-Python-Basics/python_challenges/ linux-lab:/home/player
+    sudo docker start -ai linux-lab
+```
+
+
+
 ##  Objective
 
 Ο στόχος σου δεν είναι απλώς να περάσεις τα tests.
