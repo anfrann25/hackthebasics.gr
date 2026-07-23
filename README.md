@@ -48,5 +48,4 @@ CTFs
 
 Να δημιουργηθεί ένας οδηγός στα ελληνικά για όσους θέλουν να ξεκινήσουν στον χώρο του Cybersecurity.
 
-sdfgjsdhfoasdjfioasdjfioasdjiofjasdiofjasdfjasdiofjsdaiojfasdjiofioasdj
 > Learn the basics. Build your lab. Start your cybersecurity journey.
