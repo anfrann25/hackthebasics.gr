@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     vim \
     git \
     build-essential \
+    python3 \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. Δημιουργία του χρήστη "player" με password "player"
