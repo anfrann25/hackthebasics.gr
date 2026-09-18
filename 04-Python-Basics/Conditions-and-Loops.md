@@ -203,7 +203,7 @@ while True:
 
 ---
 
-# 🎯 Mini Challenge
+# Mini Challenge
 
 Δημιούργησε ένα αρχείο `scanner.py`.
 

@@ -182,7 +182,7 @@ print(port)
 
 ---
 
-# 🎯 Mini Challenge
+# Mini Challenge
 
 Δημιούργησε ένα αρχείο `variables.py`.
 

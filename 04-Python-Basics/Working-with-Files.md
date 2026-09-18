@@ -154,7 +154,7 @@ with open("results.txt", "a") as file:
 
 ---
 
-# 🎯 Mini Challenge
+# Mini Challenge
 
 Δημιούργησε ένα αρχείο με όνομα:
 

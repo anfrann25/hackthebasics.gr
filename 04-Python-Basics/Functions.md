@@ -140,7 +140,7 @@ Unknown
 
 ---
 
-# 🎯 Mini Challenge
+# Mini Challenge
 
 Δημιούργησε μια Function με όνομα:
 
